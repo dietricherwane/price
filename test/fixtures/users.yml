@@ -1,0 +1,67 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  civilite: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  sex: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2011-11-13 17:12:34
+  birthdate: 2011-11-13
+  birthplace: MyString
+  current_nationality: MyString
+  region_of_residence: MyString
+  city_of_residence: MyString
+  mobile_number: 1
+  fix_number: 1
+  postal_address: MyString
+  marital_status: MyString
+  number_of_children: 1
+  diploma: MyString
+  school: MyString
+  graduation_year: 2011-11-13
+  domain: MyString
+  job: MyString
+  job_description: MyString
+  employer: MyString
+  contract_type: MyString
+  cv_file_name: MyString
+  cv_content_type: MyString
+  cv_file_size: 1
+  cv_updated_at: 2011-11-13 17:12:34
+
+two:
+  civilite: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  sex: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2011-11-13 17:12:34
+  birthdate: 2011-11-13
+  birthplace: MyString
+  current_nationality: MyString
+  region_of_residence: MyString
+  city_of_residence: MyString
+  mobile_number: 1
+  fix_number: 1
+  postal_address: MyString
+  marital_status: MyString
+  number_of_children: 1
+  diploma: MyString
+  school: MyString
+  graduation_year: 2011-11-13
+  domain: MyString
+  job: MyString
+  job_description: MyString
+  employer: MyString
+  contract_type: MyString
+  cv_file_name: MyString
+  cv_content_type: MyString
+  cv_file_size: 1
+  cv_updated_at: 2011-11-13 17:12:34

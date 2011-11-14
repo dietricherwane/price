@@ -1,0 +1,112 @@
+<%= form_for(@user, :html=> {:multipart=>true})  do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <!--<ul>
+				<%# @user.errors.full_messages.each do |msg| %>
+					<li><%#= msg %></li>
+				<%# end %>
+			</ul>-->
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Civilit&eacute;' %><br />
+    <%= select("post", "civilite_id", Civilite.all.collect {|c| [ c.title, c.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nom' %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Pr&eacute;noms' %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Email' %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+  	<%= f.label 'Genre' %><br />
+    <%= select("post", "gender_id", Gender.all.collect {|g| [ g.title, g.id ] }) %>
+  </div>
+  <!--<div class="field">
+    <%#= f.label 'Photo' %><br />
+    <%#= f.file_field :avatar %>
+  </div>-->
+  <div class="field">
+    <%= f.label 'Date de naissance' %><br />
+    <%= f.date_select :birthdate, :start_year => 1920, :use_month_numbers => true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Lieu de naissance' %><br />
+    <%= f.text_field :birthplace %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nationalit&eacute; actuelle' %><br />
+    <%= f.text_field :current_nationality %>
+  </div>
+  <div class="field">
+    <%= f.label 'R&eacute;gion de r&eacute;sidence' %><br />
+    <%= select("post", "region_id", Region.all.collect {|r| [ r.name, r.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Ville de r&eacute;sidence' %><br />
+    <%= select("post", "city_id", City.all.collect {|c| [ c.name, c.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Num&eacute;ro de mobile' %><br />
+    <%= f.text_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label 'Num&eacute;ro de fixe' %><br />
+    <%= f.text_field :fix_number %>
+  </div>
+  <div class="field">
+    <%= f.label 'Adresse postale' %><br />
+    <%= f.text_field :postal_address %>
+  </div>
+  <div class="field">
+    <%= f.label 'Situation matrimoniale' %><br />
+    <%= select("post", "marital_id", Marital.all.collect {|m| [ m.status, m.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label "Nombre d'enfants" %><br />
+    <%= f.text_field :number_of_children %>
+  </div>
+  <div class="field">
+    <%= f.label 'Diplome' %><br />
+    <%= select("post", "diploma_id", Diploma.all.collect {|d| [ d.title, d.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label "Ecole" %><br />
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label "Date d'obtention du diplome" %><br />
+    <%= f.date_select :graduation_year, :start_year => 1920, :use_month_numbers => true%>
+  </div>
+  <div class="field">
+    <%= f.label "Domaine d'activit&eacute;" %><br />
+    <%= select("post", "domain_id", Domain.all.collect {|d| [ d.title, d.id ] }) %>
+  </div>
+  <div class="field">
+    <%= f.label "Emploi actuel" %><br />
+    <%= f.text_field :job %>
+  </div>
+  <div class="field">
+    <%= f.label "Description de l'emploi" %><br />
+    <%= f.text_field :job_description %>
+  </div>
+  <div class="field">
+    <%= f.label "Employeur" %><br />
+    <%= f.text_field :employer %>
+  </div>
+  <div class="field">
+    <%= f.label "Type de contrat" %><br />
+    <%= select("post", "contract_id", Contract.all.collect {|c| [ c.title, c.id ] }) %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit 'Valider' %>
+  </div>
+<% end %>
